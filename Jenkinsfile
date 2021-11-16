@@ -1,13 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:15.13-alpine'
-            args '--privileged -p 3000:3000'
-        }
-    }
-    environment {
-        CI = 'true' 
-    }
+    agent any
     stages {
         stage('build') {
             steps{
